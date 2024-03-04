@@ -2,11 +2,9 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-    System.out.println(isPowerOfTwo(-16));
+    System.out.println(isPowerOfTwo(-16 ));
     }
     public static boolean isPowerOfTwo(int value){
-        value = Math.abs(value);
-        int result = Integer.bitCount(value);
-        return result == 1;
+        return value > 0 && (value & (value - 1)) == 0;
     }
 }
